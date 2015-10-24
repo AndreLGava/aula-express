@@ -10,6 +10,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/', function(req, res, next) {
+	Controller.getNew(req, res);
+  //res.render('index', { title: 'Gezuis' });
+});
+
+router.get('/', function(req, res, next) {
 	Controller.get(req, res);
   //res.render('index', { title: 'Gezuis' });
 });
