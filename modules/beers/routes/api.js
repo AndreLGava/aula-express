@@ -24,4 +24,9 @@ router.put('/:id', function(req, res, next) {
   //res.render('index', { title: 'Gezuis' });
 });
 
+router.delete('/:id', function(req, res, next) {
+	Controller.delete(req, res);
+  //res.render('index', { title: 'Gezuis' });
+});
+
 module.exports = router;

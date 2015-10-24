@@ -10,6 +10,7 @@ var routes = require('./routes/index');
 var API= {};
 API.beers = require('./modules/beers/routes/api');
 var users = require('./routes/users');
+var beers = require('./modules/beers/routes');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/beers', beers);
 
 app.use('/api/beers',API.beers);
 

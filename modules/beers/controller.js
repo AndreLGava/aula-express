@@ -33,6 +33,22 @@ var Controller = {
 	});
 
 	},
+	list: function(req, res){
+
+	var query = {};
+
+	Model.find(query, function(err, data){
+		if(err){
+			console.log('Erro : ', err);
+			msg = 'Erro: '+err;	
+		}else{
+			console.log('Listagem ', data);
+			msg= 'Listagem '+ data;
+		}
+		res.render('list', { title: 'Listagem de cervejas', beers: data });
+	});
+
+	},
 	
 	get: function(req, res){
 
@@ -74,7 +90,7 @@ var Controller = {
 	},
 	delete: function (req, res){
 
-		var query = { name: /brahma/i};
+		var query = { _id: req.params.id};
 
 		//E multi CUIDADO
 
