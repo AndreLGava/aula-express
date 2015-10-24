@@ -14,4 +14,9 @@ router.post('/', function(req, res, next) {
   //res.render('index', { title: 'Gezuis' });
 });
 
+router.put('/:id', function(req, res, next) {
+	Controller.update(req, res);
+  //res.render('index', { title: 'Gezuis' });
+});
+
 module.exports = router;

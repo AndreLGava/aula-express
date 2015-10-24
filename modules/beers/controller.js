@@ -35,14 +35,9 @@ var Controller = {
 	},
 	update:function(req, res){
 
-		var query = { name: /skol/i};
+		var query = { _id: req.params.id};
 
-		var mod ={
-			name: 'Brahma',
-			alcohol:4,
-			price: 6,
-			category: 'pilsen'
-		};
+		var mod = req.body;
 
 		var optional= {
 			upsert: false,
