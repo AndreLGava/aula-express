@@ -9,6 +9,11 @@ router.get('/', function(req, res, next) {
   //res.render('index', { title: 'Gezuis' });
 });
 
+router.get('/', function(req, res, next) {
+	Controller.get(req, res);
+  //res.render('index', { title: 'Gezuis' });
+});
+
 router.post('/', function(req, res, next) {
 	Controller.create(req, res);
   //res.render('index', { title: 'Gezuis' });
